@@ -1,0 +1,126 @@
+string_t character1, character2, introChoice, middleChoice1, middleChoice2, middleChoice3, cheatsheet;
+int n;
+n = randint(1, 5);
+    
+printf("Would you like to see a cheat sheet of the options for the story? ");
+scanf("%s", &cheatsheet);
+if(cheatsheet == "yes"){
+    printf(" You win a competition with your friend and have an option to go to one of the 3 places, Hawaii, Turkey, or Scotland. Option one, you choose Hawaii and get to choose which hotel you want to stay at. Either, a $20, $200, or $1,000 hotel a night. The $20 hotel gives you a bad experience at Hawaii, the $200 hotel gives you a very fun time, and the $1,000 hotel gives you the best experience except you don't leave your hotel since it's so nice. Option 2, you choose Turkey and get to choose where you want to visit first. Either, a Turkey zoo, mosque, or beach. The zoo gives you a good experience and you get to see lots of animals, the mosques are very beautiful and amazing place to visit, and the beach is also really exciting and fun. And lastly the third option you choose Scotland and get to choose what type of transportation you want around the country. Either, a car, taxi, or bus. The car saves you lots of time and you end up getting to the hike safely, but get into a big problem at the end, the taxi costs you lots of money but you are happy in the end because you get to see your favorite waterfall, and the bus makes you exgaused since you had to stand the whole ride so your trip was ruined. \n ");
+}
+    
+void intro(){
+    printf("Enter a character name: ");
+    scanf("%s", &character1);
+    printf("Enter another character name: ");
+    scanf("%s", &character2);
+    printf(character1, " and ", character2," just got first place in a quiz competition. This competition was testing on the knowledge of the full human body. ", character1, " and ", character2," passed with the highest score of 98 percent. The prize for the first place winner is a ticket to travel to one of the 3 places:\n 1. Hawaii\n 2. Turkey\n 3. Scotland\n Where would ", character1, " and ", character2 ," like to visit? ");
+    printf("Make your choice: 1, 2, or 3: \n");
+    scanf("%s", &introChoice);
+    while(introChoice != "1" && introChoice != "2" && introChoice != "3"){
+        printf("That is not a choice. Please choose '1', '2', or '3'\n");
+        scanf("%s", &introChoice);
+    }
+}
+void middle1(){
+    printf("Hawaii: ", character1, " and ", character2," land in Hawaii at 9 p.m. and are exhausted from traveling. They do not have a car to drive and have to rent one out. They both go to the renting station near the airport and ask for their reserved car. The line is extra long since it is summer break and everyone wants to visit Hawaii. When ", character1, " and ", character2," get their car, they go to their hotel. Which hotel would ", character1, " and ", character2, " like to stay at?\n 1. $20 hotel a night\n 2. $200 hotel a night\n 3. $1,000 hotel a night: \n");
+    printf("Choose a number: 1, 2, or 3:\n");
+    scanf("%s", &middleChoice1);
+    while(middleChoice1 != "1" && middleChoice1 != "2" && middleChoice1 != "3"){
+        printf("That is not a choice. Please choose '1', '2', or '3'\n");
+        scanf("%s", &middleChoice1);
+    }
+}
+void middle2(){
+    printf("Turkey: ", character1, " and ", character2, " land in Turkey early in the morning and are starving. They both want to go to a restaurant for dinner and go in an uber to get there. The food is really fancy and ", character1, " and ", character2, " are really starting to like Turkey even if they didn't travel around anywhere yet. After eating they go to their hotel room to rest and set their ", n, " bags. ", character1, " and ", character2, " rest and do some research on the top places to visit in Turkey and find 3. Which attraction site would ", character1, " and ", character2, " like to see first?\n 1. The Turkey Zoo\n 2. Turkey Mosques\n 3. Turkey beach\n ");
+    printf("Choose a number: 1, 2, or 3\n");
+    scanf("%s", &middleChoice2);
+    while(middleChoice2 != "1" && middleChoice2 != "2" && middleChoice2 != "3"){
+        printf("That is not a choice. Please choose '1', '2', '3'\n");
+        scanf("%s", &middleChoice2);
+    }
+}
+void middle3(){
+    printf("Scotland: ", character1, " and ", character2, " land in Scotland late in the night around 2 a.m. and are tired from the flight. They are both really grateful that their hotel is a 5 minute walk from the airport, so they decide to walk. When ", character1, " and ", character2, " get to their hotel, they change and go to sleep right away so that they aren't tired when they go site seeing. In the morning ", character1, " and ", character2, " eat breakfast at the hotel and decide to go hiking in the mountains. Which vehicle should ", character1, " and ", character2, " take to the hike.\n 1. Rent a car\n 2. Get a taxi\n 3. Take the bus\n" );
+    printf("Choose a number: 1, 2, or 3\n");
+    scanf("%s", &middleChoice3);
+    while(middleChoice3 != "1" && middleChoice3 != "2" && middleChoice3 != "3"){
+        printf("That is not a choice. Please choose '1', '2', '3'\n");
+        scanf("%s", &middleChoice3);
+    }
+}
+void end1(){
+    printf("$20 hotel a night: ", character1, " and ", character2, " choose the cheapest hotel price because they want to save money. When ", character1, " and ", character2, " get to their hotel, they are disgusted. Even though the hotel was cheap, the pictures on the website were not bad at all. After looking online for different hotels, ", character1, " and ", character2, " cannot find any hotels because they are all booked for the summer. When ", character1, " and ", character2, " head to bed, they see ", n, " bed bugs and their whole trip is ruined!\n The End!");
+    exit (1);
+}
+
+void end2(){
+    printf("$200 hotel a night: ", character1, " and ", character2, " drive to their hotel and go inside. The hotel has glass everywhere and looks like it was newly built because of the colors they have. They love it so much because it looks really nice and it even has a pool. ", character1, " and ", character2, " go swimming right after they eat, and then head back to go to sleep. Both of them are so happy about the hotel that they decide to extend their trip a week longer. \n The End!");
+}
+void end3(){
+    printf(" $1,000 hotel a night: ", character1, " and ", character2, " arrive at their hotel and are really happy from what they chose. They enter the lobby and check-in their room. ", character1, " enters the room first and loves it so much. Then comes ", character2, " who jumps on the bed right away. They both spend lots of time in the hotel and are starting to realize that it might have been not so good of an idea. ", character1, " and ", character2, " make a promise to themselves that they would for sure get out of the hotel and not stay inside the whole time. The next morning both ", character1, " and ", character2, " find so many more things to do in the hotel, they say there the whole trip!\n The End!!");
+}
+void end4(){
+    printf(" Turkey Zoo: ", character1, " and ", character2, " arrive at the zoo. They haven't even entered yet but are so excited because of all the decorations the park put up. When they buy their tickets, the worker hands them a direction sheet of things not to do while seeing the animals. The paper has rules and a map on the back of it, just so visitors could know where they were going. After seeing many animals, ", character1, " and ", character2, " get really tired and decide the last thing they would do is go on the whale watching ride! \n The End!!");
+}
+
+void end5(){
+    printf(" Turkey Mosques: ", character1, " and ", character2, " go to the nearest mosque, which is in Istanbul, and see how beautiful it is. The mosque has glass walls that have green and red print on them. The mosque has a really big minaret, that is a really calm color of grey. ", character1, " and ", character2, " are really amazed at the scenic view, they immidiatley search for more mosques around the city. The next day, they end up going to 2 more different mosques that are near by their hotel. ", character1, " and ", character2, " really love the mosques they visted and enjoyed Turkey a lot!\n The End!!");
+}
+
+void end6(){
+    printf(" Turkey Beaches: ", character1, " and ", character2, " get ready at their hotel and grab a bag to fill up with their extra clothes along with 2 towels. They are headed for the beach which is walking distance from their hotel. ", character1, " and ", character2, " go outside and start walking towards the beach. They see many people going the same way and wearing their swimming clothes. The beach is just a few more blocks away when ", character1, " and ", character2, " see a shop with tourist toys, which sells a bunch of magnets, badges, and more to show you've been to Turkey. They both go inside and buy lots of goodies to show their family and friends at home!\n The End!!");
+}
+
+void end7(){
+    printf(" Rent a car: ", character1, " and ", character2, " decide to rent a car to go up to the mountains. When they go to the rental place, they decide to get a open top car so that they could really enjoy their trip. When ", character1, " and ", character2, " arrive at the hiking area, they get out and grab their hiking bag which they packed their water bottles and granola bars. As they start their hike, they see a sign which says something about bears, rattlesnakes, and lizards. ", character1, " and ", character2, " get a little freaked out and they continue on with the hike. A few hours later, they are on their way back and hear a little scatter. ", character1, " and ", character2, " turn around a see a rattlesnake looking straight at them!\n The End!!");
+}
+
+void end8(){
+    printf(" Get a taxi: ", character1, " and ", character2, " decide to take a taxi to get to the hiking area they really wanted to go to. They call a taxi and get in. After a while, the taxi finally comes to a stop, and ", character1, " and ", character2, " look at the price of their ride and are shocked. The taxi ride was super expensive and they start to regret taking it. When they pay, they head towards the hike. They stop to use the restrooms and get snacks by a mini store a few minutes away. When ", character1, " and ", character2,  " start hiking they see that the hike will take 3 hours. After an hour, they see the waterfall they have been waiting for and are so happy it's so pretty!\n The End!!");
+}
+
+void end9(){
+    printf(" Take the bus: ", character1, " and ", character2, " want to take the bus to get to their hiking destination because it saves more money. When they get into the bus, they see that there are many people sitting and that all the seets are taken. ", character1, " and ", character2, " have to stand and hold onto the bars, the whole way. They start to think that it was a bad idea since standing will make them tired easier and that they would be exgaused by the time they would start their hike. ", character1, " and ", character2, " arrive at the hike and were right about themselves being tired. They both go to the benches near the restrooms and sit down. Their legs are so sore they cannot walk and now their whole trip is ruined!\n The End!!");
+}
+
+int main(){
+    intro();
+    if(introChoice == "1"){
+        middle1();
+        if(middleChoice1 == "1"){
+            end1();
+        }
+        if(middleChoice1 == "2"){
+            end2();
+        }
+        if(middleChoice1 == "3"){
+            end3();
+        }
+    }
+    if(introChoice == "2"){
+        middle2();
+        if(middleChoice2 == "1"){
+            end4();
+        }
+        if(middleChoice2 == "2"){
+            end5();
+        }
+        if(middleChoice2 == "3"){
+            end6();
+        }
+    }
+    if(introChoice == "3"){
+        middle3();
+        if(middleChoice3 == "1"){
+            end7();
+        }
+        if(middleChoice3 == "2"){
+            end8();
+        }
+        if(middleChoice3 == "3"){
+            end9();
+        }
+    }
+
+}
+
