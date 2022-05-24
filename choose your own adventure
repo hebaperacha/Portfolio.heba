@@ -1,6 +1,7 @@
 string_t character1, character2, introChoice, middleChoice1, middleChoice2, middleChoice3, cheatsheet;
 int n;
 n = randint(1, 5);
+m = randint(1, 8);
     
 // Cheat Sheet
 printf("Would you like to see a cheat sheet of the options for the story? ");
@@ -59,7 +60,7 @@ void middle3(){
 
 // End 1
 void end1(){
-    printf("$20 hotel a night: ", character1, " and ", character2, " choose the cheapest hotel price because they want to save money. When ", character1, " and ", character2, " get to their hotel, they are disgusted. Even though the hotel was cheap, the pictures on the website were not bad at all. After looking online for different hotels, ", character1, " and ", character2, " cannot find any hotels because they are all booked for the summer. When ", character1, " and ", character2, " head to bed, they see ", n, " bed bugs and their whole trip is ruined!\n The End!");
+    printf("$20 hotel a night: ", character1, " and ", character2, " choose the cheapest hotel price because they want to save money. When ", character1, " and ", character2, " get to their hotel, they are disgusted. Even though the hotel was cheap, the pictures on the website were not bad at all. After looking online for different hotels, ", character1, " and ", character2, " cannot find any hotels because they are all booked for the summer. When ", character1, " and ", character2, " head to bed, they see ", m, " bed bugs and their whole trip is ruined!\n The End!");
     exit (1);
 }
 
